@@ -77,11 +77,12 @@ class Cell extends Component{
     render(){
         return(
             <div>
-                <button onClick={this.addRow}>Add Row</button>
-                <button onClick={this.delRow}>del Row</button>
-                <button onClick={this.addCol}>Add col</button>
-                <button onClick={this.delCol}>del col</button>
-
+                <div id = "rowBtns">
+                    <button className ="addBtn" onClick={this.addRow}>Add Row</button>
+                    <button className ="delBtn" onClick={this.delRow}>delete Row</button>
+                    <button className ="addBtn" onClick={this.addCol}>Add column</button>
+                    <button className ="delBtn" onClick={this.delCol}>delete column</button>
+                </div>
                 <table> 
                     <tbody id = "center" style={{backgroundColor: this.props.color}}>
                         {this.state.rows}

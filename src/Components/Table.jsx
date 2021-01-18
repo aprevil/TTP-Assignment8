@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
   
 import TableCell from './TableCell.jsx';
+import './TableCell.css'
 
 class Table extends React.Component {
   constructor(props) {
@@ -24,15 +25,25 @@ class Table extends React.Component {
 selectBlue() {
     this.setState({color: "blue"});
   }
+  changeColor = (e) =>{
+    if(e.target.value === "red") this.selectRed()
+    else if(e.target.value === "green") this.selectGreen()
+    else this.selectBlue()
+  }
 
   render() {
     const color = this.state.color;
     return (
-      <div>
-        <button onClick={this.selectRed}>Red</button>
-        <button onClick={this.selectGreen}>Green</button>
-        <button onClick={this.selectBlue}>Blue</button>
-        <p>Color selected: {this.state.color}</p>
+      <div id = "page">
+        <h1>Grid Maker</h1>
+        <div id = "nav">
+          <p><strong>Color selected: {this.state.color}</strong></p>
+            <select   id = "drop" style={{backgroundColor:this.state.color}} onChange = {this.changeColor}>
+              <option value = "red">red</option>
+              <option value = "green">green</option>
+              <option value = "blue">blue</option>
+            </select>
+        </div>
         <TableCell color={this.state.color}/>
       </div>
     )

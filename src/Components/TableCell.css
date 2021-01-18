@@ -2,9 +2,43 @@ tr,td,table{
     border: 3px solid black;
     border-collapse: collapse;
     padding: 30px;
+    margin-left: 700px;
+    margin-top: 100px;
+
 }
 #center{
-    margin-right: 0 auto;
-    margin-left:  0 auto;
+    
     background-color: white;
+}
+.addBtn{
+    color: white;
+    background-color: green;
+    padding: 20px 20px;
+    margin-left: 200px;
+}
+.delBtn{
+    margin-right: 200px;
+    color: white;
+    padding: 20px 20px;
+    background-color: red;
+
+}
+#nav{
+    font-size: large;
+    margin-top: fill;
+    background-color: blue;
+    padding: 20px 20px 20px
+    
+}
+#rowBtns{
+    background-color: rgb(123, 214, 49);
+}
+body{
+    margin:0;
+    background-color: beige;
+
+}
+#drop{
+   padding: 5px 20px;
+   color: maroon;
 }
