@@ -5,7 +5,8 @@ class Cell extends Component{
         super(props);
         this.state={
             rows: [],
-            cols: 2
+            cols: 2,
+            colorSelected: ""
         }
     }
 
@@ -72,6 +73,7 @@ class Cell extends Component{
             })
         }
     }
+
     render(){
         return(
             <div>
@@ -79,8 +81,9 @@ class Cell extends Component{
                 <button onClick={this.delRow}>del Row</button>
                 <button onClick={this.addCol}>Add col</button>
                 <button onClick={this.delCol}>del col</button>
+
                 <table> 
-                    <tbody>
+                    <tbody id = "center" style={{backgroundColor: this.props.color}}>
                         {this.state.rows}
                     </tbody>
                 </table> 
