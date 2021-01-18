@@ -9,7 +9,7 @@ class Cell extends Component{
         }
     }
 
-
+    //adds rows to grid
     addRow = () =>{
         let col =[];
         if(this.state.cols < 2){
@@ -26,13 +26,13 @@ class Cell extends Component{
             })
         }
     }
-    
+    //removes rows from grid
     delRow = () =>{
         this.setState({
             rows: this.state.rows.splice(1)
         })
     }
-    
+    //adds columns to grid
     addCol = () =>{
         this.setState({
             cols: this.state.cols+1
@@ -52,6 +52,7 @@ class Cell extends Component{
             rows: table
         })
     }
+    //removes columns from grid
     delCol = () =>{
         if(this.state.cols>0){
 
