@@ -9,7 +9,7 @@ class Table extends React.Component {
     this.selectRed = this.selectRed.bind(this);
     this.selectGreen = this.selectGreen.bind(this);
     this.selectBlue = this.selectBlue.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
 
     this.state = {color: ""};
   }
@@ -33,8 +33,6 @@ selectBlue() {
         <button onClick={this.selectGreen}>Green</button>
         <button onClick={this.selectBlue}>Blue</button>
         <p>Color selected: {this.state.color}</p>
-        <TableCell color={this.state.color}/>
-        <TableCell color={this.state.color}/>
         <TableCell color={this.state.color}/>
       </div>
     )

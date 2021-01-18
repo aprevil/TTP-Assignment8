@@ -6,7 +6,7 @@ function App() {
   return (
 
     <div className="App">
-      <TableCell/>
+      <Table/>
       <table id = "tabl"></table>
     </div>
   );
